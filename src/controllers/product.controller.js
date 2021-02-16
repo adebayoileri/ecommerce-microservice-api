@@ -101,6 +101,7 @@ class ProductController {
         throw new Error(`product with id: ${productId} doesn't exists`);
       }
       return res.status(200).json({
+        status: "success",
         message: "got a product successfully",
         data: productFound,
       });
@@ -122,6 +123,7 @@ class ProductController {
 
       return res.status(200).json({
         status: "success",
+        message: "got all products successfully",
         data: getAllProducts,
         totalPages: Math.ceil(count / limit),
         currentPage: page,

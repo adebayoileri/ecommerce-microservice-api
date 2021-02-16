@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import authRoutes from "./routes/authRoutes";
 import productRoutes from "./routes/productRoutes";
+import orderRoutes from "./routes/orderRoutes";
+
 
 const app = express();
 dotenv.config();
@@ -33,6 +35,8 @@ app.get("/", async (req, res) => {
 
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/product", productRoutes);
+app.use("/api/v1/order", orderRoutes);
+
 
 const PORT = process.env.PORT || 4200;
 

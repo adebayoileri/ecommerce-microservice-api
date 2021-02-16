@@ -22,7 +22,7 @@ const OrderSchema = new Schema(
     sellerStatus: {
       type: String,
       enum: ["pending", "accepted", "completed", "cancelled"],
-      default: "accepted",
+      default: "pending",
     },
     orderStatus: {
       type: String,
